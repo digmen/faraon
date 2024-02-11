@@ -92,6 +92,13 @@ strong {
   margin-block: 100px;
 }
 
+.poster {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .poster_one,
 .poster_two,
 .poster_three,

@@ -178,7 +178,7 @@ export default function App() {
 
       <span className='line'></span>
 
-      <div>
+      <div className='poster'>
         <div className='poster_one'>
           <img className='poster_photo_one' src={poster_one} alt='poster' />
         </div>
