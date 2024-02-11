@@ -42,7 +42,7 @@ export default function App() {
       <div className='slider_one'>
         <Swiper
           mousewheel={true}
-          slidesPerView={10}
+          slidesPerView={4}
           spaceBetween={30}
           loop={true}
           freeMode={true}
@@ -54,39 +54,6 @@ export default function App() {
           }}
           modules={[Mousewheel, Autoplay, FreeMode]}
         >
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
           <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
           <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
           <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
@@ -111,24 +78,18 @@ export default function App() {
       <div className='slider_two'>
         <Swiper
           mousewheel={true}
-          slidesPerView={10}
+          slidesPerView={3}
           spaceBetween={0}
           loop={true}
           freeMode={true}
           autoplay={{
-            delay: 1000,
+            delay: 100,
           }}
           pagination={{
             clickable: true,
           }}
           modules={[Mousewheel, Autoplay, FreeMode]}
         >
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
           <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
           <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
           <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
