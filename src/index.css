@@ -136,9 +136,10 @@ strong {
 .poster_seventeen:hover::before,
 .poster_eighteen:hover::before,
 .poster_nineteen:hover::before {
-  z-index: 2;
+  z-index: 1;
   opacity: 1;
 }
+
 
 .poster_photo_one:hover,
 .poster_photo_two:hover,
@@ -159,7 +160,8 @@ strong {
 .poster_photo_seventeen:hover,
 .poster_photo_eighteen:hover,
 .poster_photo_nineteen:hover {
-  z-index: 1;
+  z-index: 2;
+  filter: brightness(0.3);
 }
 
 .poster_one::before {
@@ -171,16 +173,9 @@ strong {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.466);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 4;
+  color: white;
 }
-
-
 
 
 .poster_two::before {
@@ -191,12 +186,229 @@ strong {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.466);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: white;
+}
+
+
+.poster_three::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_four::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_five::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_six::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_seven::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_eight::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_nine::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_ten::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_eleven::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_twelve::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_thirteen::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_fourteen::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_fifteen::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_sixteen::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_seventeen::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_eighteen::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
+}
+
+.poster_nineteen::before {
+  content: "2015 RAGE MODE (RARE ACTION)";
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, z-index 0.3s ease;
+  z-index: 2;
+  color: white;
 }
