@@ -20,8 +20,8 @@ export default function App() {
 
 
   const handleClick = () => {
-    const xPos = Math.random() * (window.innerWidth - 200); // Ограничиваем максимальное значение, чтобы кнопка не уходила за край экрана
-    const yPos = Math.random() * (window.innerHeight - 50); // Ограничиваем максимальное значение, чтобы кнопка не уходила за край экрана
+    const xPos = Math.random() * (window.innerWidth - 50); // Ограничиваем максимальное значение, чтобы кнопка не уходила за край экрана
+    const yPos = Math.random() * (window.innerHeight - 30); // Ограничиваем максимальное значение, чтобы кнопка не уходила за край экрана
     setPosition({ x: xPos, y: yPos });
   };
 
