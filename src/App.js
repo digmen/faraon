@@ -1,203 +1,122 @@
-import React from 'react';
-import './index.css';
-import logo from './assets/logo_faraon.svg';
+import React, { useEffect, useState } from 'react'
+import CarouselPhara from './components/CarouselPhara'
+import CarouselMusic from './components/CarouselMsuic'
+
+
+import logo from './assets/logo_faraon.svg'
+import bg from './assets/bg.png'
+import hello_one from './assets/hello_one.png'
+import hello_two from './assets/hello_two.png'
+import heart from './assets/heart.png'
+
 import photo_one from './assets/photo_one.png'
 import photo_two from './assets/photo_two.png'
 import photo_three from './assets/photo_three.png'
+import Poster from './components/poster/Poster'
 
-
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // импорт стилей Swiper
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Mousewheel, FreeMode, Autoplay } from 'swiper/modules';
-
-
-import poster_one from './assets/poster/photo_onecvbcvbcvbcv.png'
-import poster_2 from './assets/poster/photo_onecvbcvbvcb.png'
-import poster_3 from './assets/poster/photo_onedfdf.png'
-import poster_4 from './assets/poster/photo_onedfgdfgd.png'
-import poster_5 from './assets/poster/photo_onedfgdfgdf.png'
-import poster_6 from './assets/poster/photo_onedfgdfgdfg.png'
-import poster_7 from './assets/poster/photo_onedsfsdfs.png'
-import poster_8 from './assets/poster/photo_oneewe.png'
-import poster_9 from './assets/poster/photo_onefdsfsd.png'
-import poster_10 from './assets/poster/photo_onefsdfds.png'
-import poster_11 from './assets/poster/photo_onefsdfs.png'
-import poster_12 from './assets/poster/photo_onegdgdfgdf.png'
-import poster_13 from './assets/poster/photo_onesdf.png'
-import poster_14 from './assets/poster/photo_onesdfsdf.png'
-import poster_15 from './assets/poster/photo_onewe.png'
-import poster_17 from './assets/poster/photo_onewew.png'
-import poster_18 from './assets/poster/photo_onewewae.png'
-import poster_19 from './assets/poster/photo_three.png'
-import poster_20 from './assets/poster/photo_two.png'
 
 export default function App() {
+  const [position, setPosition] = useState({ x: 100, y: 105 });
+
+
+  const handleClick = () => {
+    const xPos = Math.random() * (window.innerWidth - 200); // Ограничиваем максимальное значение, чтобы кнопка не уходила за край экрана
+    const yPos = Math.random() * (window.innerHeight - 50); // Ограничиваем максимальное значение, чтобы кнопка не уходила за край экрана
+    setPosition({ x: xPos, y: yPos });
+  };
+
+
+  const [page, setPage] = useState(true);
+  const [pageTwo, setPageTwo] = useState(false);
+  const [showPage, setShowPage] = useState(false);
+
+  useEffect(() => {
+    // Проверяем, если page стал false
+    if (!page) {
+      // Устанавливаем таймер
+      const timer = setTimeout(() => {
+        // По завершению таймера меняем состояния страниц
+        setShowPage(true); // Показываем страницу
+        setPage(false); // Меняем состояние page
+        setPageTwo(false); // Меняем состояние pageTwo
+      }, 2000); // Через 5 секунд изменится состояние
+
+      // Возвращаем функцию очистки для предотвращения утечек памяти
+      return () => clearTimeout(timer);
+    }
+  }, [page]); // Добавляем зависимость от переменной page
+
+  // Функция для изменения состояний page и pageTwo
+  const decreaseCount = () => {
+    setPage(false); // Меняем состояние page
+    setPageTwo(true); // Меняем состояние pageTwo
+  };
+
+  const bodyBackgroundColor = showPage ? 'black' : 'white';
+
+  // Изменяем стиль body напрямую
+  document.body.style.backgroundColor = bodyBackgroundColor;
+
   return (
-    <div className='container'>
-      <img className='logo' src={logo} alt='logo' />
-      <div className='slider_one'>
-        <Swiper
-          mousewheel={true}
-          slidesPerView={4}
-          spaceBetween={30}
-          loop={true}
-          freeMode={true}
-          autoplay={{
-            delay: 500,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Mousewheel, Autoplay, FreeMode]}
-        >
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_one'>PHARAОН</div></SwiperSlide>
-        </Swiper>
-      </div>
-
-      <div className='text_one'>
-        <span className='title_one'>
-          Где правили фараоны?
-        </span>
-        <span>
-          А, где?
-        </span>
-        <span className='red'>
-          В РУССКОМ РЭПЕ!!!
-        </span>
-      </div>
+    <div className='container' >
+      {page &&
+        <div className='onebord'>
+          <img className='bg' src={bg} alt='bg' />
+          <div className='conent'>
+            <img src={hello_one} alt='hello' />
+            <h1>Будешь моей валентинкой?</h1>
+            <div className='button'>
+              <button onClick={decreaseCount}>Да</button>
+              <button
+                className="floating-button"
+                style={{ left: position.x, top: position.y }}
+                onClick={handleClick}>
+                Нет
+              </button>
+            </div>
+          </div>
+        </div>
+      }
 
 
-      <div className='slider_two'>
-        <Swiper
-          mousewheel={true}
-          slidesPerView={3}
-          spaceBetween={0}
-          loop={true}
-          freeMode={true}
-          autoplay={{
-            delay: 100,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Mousewheel, Autoplay, FreeMode]}
-        >
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-          <SwiperSlide><div className='slider_block_two'>Музыка</div></SwiperSlide>
-        </Swiper>
-      </div>
+      {
+        pageTwo &&
+        <div className='onebord'>
+          <img className='bg' src={bg} alt='bg' />
+          <div className='conent'>
+            <img src={hello_two} alt='hello' />
+            <h1>УРААА, СПАСИБО!!!</h1>
+            <div className='heart'>
+              <img src={heart} alt='heart' />
+            </div>
+          </div>
+        </div>
+      }
 
 
-      <div className='photo_block'>
-        <img src={photo_one} alt='photo_one' />
-        <span className='text_photo'>Лучший рэпер PHARA<strong>ОН</strong></span>
-        <img src={photo_two} alt='photo_two' />
-        <span className='text_photo'>Лучший рэпер PHARA<strong>ОН</strong></span>
-        <img src={photo_three} alt='photo_three' />
-        <span className='text_photo'>Лучший рэпер PHARA<strong>ОН</strong></span>
-      </div>
-
-      <span className='line'></span>
-
-      <div className='poster'>
-        <div className='poster_one'>
-          <img className='poster_photo_one' src={poster_one} alt='poster' />
+      {
+        showPage &&
+        <div className='container'>
+          <img className='logo' src={logo} alt='logo' />
+          <CarouselPhara />
+          <div className='block_first_text'>
+            <span className='first_text'>Где правили фараоны?</span>
+            <span className='first_text'>А, где?</span>
+            <span className='first_text'>В РУССКОМ РЭПЕ!!!</span>
+          </div>
+          <CarouselMusic />
+          <div className='photo'>
+            <img src={photo_one} alt='photo_one' />
+            <span>Лучший рэпер PHARA<strong>ОН</strong></span>
+            <img src={photo_two} alt='photo_two' />
+            <span>Лучший рэпер PHARA<strong>ОН</strong></span>
+            <img src={photo_three} alt='photo_three' />
+            <span>Лучший рэпер PHARA<strong>ОН</strong></span>
+          </div>
+          <span className='line'></span>
+          <Poster />
         </div>
-        <div className='poster_two'>
-          <img className='poster_photo_two' src={poster_2} alt='poster' />
-        </div>
-        <div className='poster_three'>
-          <img className='poster_photo_three' src={poster_3} alt='poster' />
-        </div>
-        <div className='poster_four'>
-          <img className='poster_photo_four' src={poster_4} alt='poster' />
-        </div>
-        <div className='poster_five'>
-          <img className='poster_photo_five' src={poster_5} alt='poster' />
-        </div>
-        <div className='poster_six'>
-          <img className='poster_photo_six' src={poster_6} alt='poster' />
-        </div>
-        <div className='poster_seven'>
-          <img className='poster_photo_seven' src={poster_7} alt='poster' />
-        </div>
-        <div className='poster_eight'>
-          <img className='poster_photo_eight' src={poster_8} alt='poster' />
-        </div>
-        <div className='poster_nine'>
-          <img className='poster_photo_nine' src={poster_9} alt='poster' />
-        </div>
-        <div className='poster_ten'>
-          <img className='poster_photo_ten' src={poster_10} alt='poster' />
-        </div>
-        <div className='poster_eleven'>
-          <img className='poster_photo_eleven' src={poster_11} alt='poster' />
-        </div>
-        <div className='poster_twelve'>
-          <img className='poster_photo_twelve' src={poster_12} alt='poster' />
-        </div>
-        <div className='poster_thirteen'>
-          <img className='poster_photo_thirteen' src={poster_13} alt='poster' />
-        </div>
-        <div className='poster_fourteen'>
-          <img className='poster_photo_fourteen' src={poster_14} alt='poster' />
-        </div>
-        <div className='poster_fifteen'>
-          <img className='poster_photo_fifteen' src={poster_15} alt='poster' />
-        </div>
-        <div className='poster_sixteen'>
-          <img className='poster_photo_sixteen' src={poster_17} alt='poster' />
-        </div>
-        <div className='poster_seventeen'>
-          <img className='poster_photo_seventeen' src={poster_18} alt='poster' />
-        </div>
-        <div className='poster_eighteen'>
-          <img className='poster_photo_eighteen' src={poster_19} alt='poster' />
-        </div>
-        <div className='poster_nineteen'>
-          <img className='poster_photo_nineteen' src={poster_20} alt='poster' />
-        </div>
-      </div>
-    </div>
-  );
+      }
+    </div >
+  )
 }

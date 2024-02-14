@@ -1,421 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Forum', serif;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Forum", serif;
+    color: white;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: black;
-  color: white;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-  margin-block: 30px;
+    margin-block: 20px;
+    width: 100px;
+    height: 100px;
 }
 
-.slider_one {
-  width: 99vw;
+
+.block_first_text {
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
 }
 
-.slider_block_one {
-  width: max-content;
-  padding: 10px 25px;
-  border: 1px solid white;
-  border-radius: 5px;
+.first_text {
+    font-size: 19px;
 }
 
-.title_one {
-  font-size: 19px;
+.first_text:nth-child(3) {
+    color: red;
 }
 
-.red {
-  font-size: 19px;
-  color: #B70000;
+.photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
-.text_one {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2px;
-  margin-block: 25px;
-}
-
-.slider_two {
-  width: 99vw;
-}
-
-.slider_block_two {
-  width: max-content !important;
-  padding: 10px 25px;
-  border-block: 1px solid white;
-}
-
-.swiper-slide {
-  width: max-content !important;
-}
-
-.text_photo {
-  font-size: 25px;
+.photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
 
 strong {
-  color: #CD0000;
+    color: red;
 }
 
-.photo_block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
 
-.photo_block img {
-  border-radius: 5px;
-}
 
 .line {
-  width: 100%;
-  height: 1px;
-  background-color: white;
-  margin-block: 100px;
-}
-
-.poster {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.poster_one,
-.poster_two,
-.poster_three,
-.poster_four,
-.poster_five,
-.poster_six,
-.poster_seven,
-.poster_eight,
-.poster_nine,
-.poster_ten,
-.poster_eleven,
-.poster_twelve,
-.poster_thirteen,
-.poster_fourteen,
-.poster_fifteen,
-.poster_sixteen,
-.poster_seventeen,
-.poster_eighteen,
-.poster_nineteen {
-  position: relative;
-  display: inline-block;
-  z-index: 2;
+    margin-block: 50px;
+    height: 1px;
+    width: 100%;
+    background-color: white;
 }
 
 
-.poster_one:hover::before,
-.poster_two:hover::before,
-.poster_three:hover::before,
-.poster_four:hover::before,
-.poster_five:hover::before,
-.poster_six:hover::before,
-.poster_seven:hover::before,
-.poster_eight:hover::before,
-.poster_nine:hover::before,
-.poster_ten:hover::before,
-.poster_eleven:hover::before,
-.poster_twelve:hover::before,
-.poster_thirteen:hover::before,
-.poster_fourteen:hover::before,
-.poster_fifteen:hover::before,
-.poster_sixteen:hover::before,
-.poster_seventeen:hover::before,
-.poster_eighteen:hover::before,
-.poster_nineteen:hover::before {
-  z-index: 1;
-  opacity: 1;
+.onebord {
+    position: relative;
+    background-color: white;
+    margin-block: 30vh;
 }
 
-
-.poster_photo_one:hover,
-.poster_photo_two:hover,
-.poster_photo_three:hover,
-.poster_photo_four:hover,
-.poster_photo_five:hover,
-.poster_photo_six:hover,
-.poster_photo_seven:hover,
-.poster_photo_eight:hover,
-.poster_photo_nine:hover,
-.poster_photo_ten:hover,
-.poster_photo_eleven:hover,
-.poster_photo_twelve:hover,
-.poster_photo_thirteen:hover,
-.poster_photo_fourteen:hover,
-.poster_photo_fifteen:hover,
-.poster_photo_sixteen:hover,
-.poster_photo_seventeen:hover,
-.poster_photo_eighteen:hover,
-.poster_photo_nineteen:hover {
-  z-index: 2;
-  filter: brightness(0.3);
+.conent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.poster_one::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 4;
-  color: white;
+.conent h1 {
+    font-size: 12px;
+    background-color: #FD66AC;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-
-.poster_two::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
+.conent img {
+    width: 80px;
+    height: 60px;
 }
 
-
-.poster_three::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
+.button button {
+    border: none;
+    background-color: #66BDFD;
+    border-radius: 5px;
+    padding: 5px;
 }
 
-.poster_four::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
+.button {
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+    margin-block: 20px;
 }
 
-.poster_five::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
+.bg {
+    width: 100%;
+    height: 100%;
 }
 
-.poster_six::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
+.floating-button {
+    position: absolute;
+    padding: 5px;
+    background-color: #66BDFD;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
 
-.poster_seven::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
+.floating-button:hover {
+    background-color: #66BDFD;
 }
 
-.poster_eight::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_nine::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_ten::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_eleven::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_twelve::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_thirteen::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_fourteen::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_fifteen::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_sixteen::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_seventeen::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_eighteen::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
-}
-
-.poster_nineteen::before {
-  content: "2015 RAGE MODE (RARE ACTION)";
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease, z-index 0.3s ease;
-  z-index: 2;
-  color: white;
+.heart img {
+    width: 50px;
+    height: 50px;
+    margin-block: 10px;
 }
